@@ -8,7 +8,6 @@ examples.mistral-basic:
     - "command"
   output:
     command_result: <% $.command_result %>
-    # interfaces: <% $.interfaces %>
   tasks:
 
     send_command:

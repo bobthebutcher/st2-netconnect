@@ -1,0 +1,14 @@
+---
+description: "Run a command on a Juniper Device"
+enabled: true
+runner_type: mistral-v2
+entry_point: workflows/send_command.yaml
+name: send_command
+pack: netconnect
+parameters:
+  device:
+    required: true
+    type: string
+  command:
+    required: true
+    type: string
