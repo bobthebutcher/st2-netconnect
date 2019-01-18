@@ -1,0 +1,1 @@
+-e git://github.com/bobthebutcher/netconnect.git#egg=master

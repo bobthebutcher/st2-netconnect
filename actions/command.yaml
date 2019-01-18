@@ -1,0 +1,15 @@
+---
+name: "command"
+runner_type: "python-script"
+description: "Run a command on a Juniper device."
+enabled: true
+entry_point: "command.py"
+parameters:
+  device:
+    type: "string"
+    description: "Name of device."
+    required: true
+  comamnd:
+    type: "string"
+    description: "Command to run."
+    required: true
