@@ -1,0 +1,26 @@
+version: "2.0"
+
+examples.mistral-basic:
+  description: "Workflow to run commands on a Juniper device"
+  type: direct
+  input:
+    - "device"
+    - "command"
+  output:
+    command_result: <% $.command_result %>
+    # interfaces: <% $.interfaces %>
+  tasks:
+
+    send_command:
+      action: netconnect.command device=<% $.device %> command=<% $.command %>
+      publish:
+         command_result: <% task(send_command).result.result %>
+      on-complete:
+        - notify_slack
+
+    notify_slack:
+      action: chatops.post_message
+      input:
+        message: |
+          ```<% $.command_result %>```
+        channel: "#botville"
