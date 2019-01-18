@@ -9,7 +9,7 @@ parameters:
     type: "string"
     description: "Name of device."
     required: true
-  comamnd:
+  command:
     type: "string"
     description: "Command to run."
     required: true

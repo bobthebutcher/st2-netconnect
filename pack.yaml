@@ -1,5 +1,5 @@
 ---
-ref: "st2_netconnect"
+ref: "netconnect"
 name: "netconnect"
 description: "ST2 pack for netconnect library"
 keywords:
