@@ -1,0 +1,15 @@
+name: "do_command"
+action_ref: "netconnect.command"
+description: "Send a command to a device"
+formats:
+  - "get {{ command }} from {{ device }}"
+
+ack:
+  format: "As master commands ...\n"
+result:
+  format: |
+    ```
+    {% for line in execution.result.result.split('\r\n') %}
+      {{ line }}
+    {% endfor %}
+    ```

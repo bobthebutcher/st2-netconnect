@@ -1,6 +1,6 @@
 version: "2.0"
 
-examples.mistral-basic:
+netconnect.send_command:
   description: "Workflow to run commands on a Juniper device"
   type: direct
   input:

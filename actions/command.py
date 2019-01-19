@@ -8,4 +8,4 @@ class CommandAction(Action):
         dev = JuniperDriver(device=device, username='vagrant', password='Vagrant',
                             disable_host_key_checking=True)
         dev.login()
-        return dev.send_commands([command])
+        return dev.send_commands([command])[0]
