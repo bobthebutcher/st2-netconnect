@@ -11,7 +11,7 @@ netconnect.send_command:
   tasks:
 
     send_command:
-      action: 'netconnect.command device={{ _.device }} command={{ _.command }}'
+      action: netconnect.command device='{{ _.device }}' command='{{ _.command }}'
       publish:
          command_result: '{{ task(send_command).result.result }}'
       on-complete:
