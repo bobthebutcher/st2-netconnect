@@ -11,7 +11,10 @@ netconnect.send_command:
   tasks:
 
     send_command:
-      action: "netconnect.command device={{ _.device }} command={{ _.command }}"
+      action: netconnect.command
+      input:
+        device: '{{ _.device }}'
+        command: '{{ _.command }}'
       publish:
          command_result: "{{ task('send_command').result.result }}"
       on-complete:
@@ -22,7 +25,7 @@ netconnect.send_command:
       input:
         message: |
           ```
-          {% for line in command_result.split('\r\n') %}
+          {% for line in _.command_result.split('\\r\\n') %}
             {{ line }}
           {% endfor %}
           ```
