@@ -1,4 +1,0 @@
-trigger:
-  type: "core.st2.webhook"
-  parameters:
-    url: "sample"
