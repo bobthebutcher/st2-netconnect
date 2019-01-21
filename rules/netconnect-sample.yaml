@@ -8,3 +8,9 @@
     type: "core.st2.webhook"
     parameters:
       url: "netconnect-sample.yaml"
+
+  action:
+    ref: "netconnect.send_command"
+    parameters:
+      device: "{{trigger.body.device}}"
+      command: "{{trigger.body.command}}"
