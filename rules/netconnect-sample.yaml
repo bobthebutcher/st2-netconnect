@@ -7,7 +7,7 @@
   trigger:
     type: "core.st2.webhook"
     parameters:
-      url: "netconnect-sample.yaml"
+      url: "netconnect_command"
 
   action:
     ref: "netconnect.send_command"
