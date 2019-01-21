@@ -3,7 +3,7 @@ ref: "netconnect"
 name: "netconnect"
 description: "ST2 pack for netconnect library"
 keywords:
-    - "netconnect"
+  - "netconnect"
 version: "0.0.1"
 author: "Brad Searle"
 email: "bradleysearle@gmail.com"
