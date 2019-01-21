@@ -7,13 +7,13 @@ netconnect.send_command:
     - "device"
     - "command"
   output:
-    command_result: '{{ _.command_result }}'
+    command_result: "{{ _.command_result }}"
   tasks:
 
     send_command:
-      action: netconnect.command device='{{ _.device }}' command='{{ _.command }}'
+      action: netconnect.command device="{{ _.device }}" command="{{ _.command }}"
       publish:
-         command_result: '{{ task(send_command).result.result }}'
+         command_result: "{{ task('send_command').result.result }}"
       on-complete:
         - notify_slack
 
